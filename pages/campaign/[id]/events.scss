@@ -1,0 +1,17 @@
+@import '../../../styles/_mixins';
+
+.campaign-deliverables-page {
+  padding: 0 0 40px;
+
+  &__headline {
+    @include typography-headline6();
+  }
+
+  &__deliverables {
+    position: relative;
+  }
+
+  &__deliverable {
+    margin: 20px 0 0;
+  }
+}

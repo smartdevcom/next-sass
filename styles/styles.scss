@@ -1,0 +1,153 @@
+@import '~bootstrap/scss/bootstrap';
+@import '_mixins';
+
+body {
+  background: $color-powder;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: $color-amaranth;
+
+  &[download] {
+    @include typography-body2();
+
+    border: 1px solid rgba($color-coal, 0.2);
+    border-radius: 16px;
+    color: rgba($color-coal, 0.8);
+    display: block;
+    min-width: 100px;
+    padding: 7px 16px;
+    width: 100%;
+
+    i, svg {
+      color: $color-amaranth;
+      height: 16px;
+      margin: 0 8px 0 0;
+      width: auto;
+    }
+  }
+}
+
+.card {
+  @include elevation-z4();
+
+  border: 0;
+  border-radius: 16px;
+  position: relative;
+}
+
+.chip {
+  @include typography-button();
+
+  background: $gradient-violet-lilac;
+  border-radius: 13px;
+  color: white;
+  display: inline-block;
+  margin: 0 3px 3px;
+  padding: 5px 16px;
+}
+
+.custom {
+  $root: &;
+
+  &-checkbox {
+    #{$root}-control {
+      &-input {
+        &:checked {
+          ~ #{$root}-control {
+            &-label {
+              &::after {
+                background-image: url(
+                  'data:image/svg+xml;utf8,<svg viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg"><path d="M11.0049,1.65271 L4.84096,7.7671 C4.67293,7.9338 4.40157,7.9327 4.23489,7.7647 L0.99271,4.49629 C0.82604,4.32825 0.82711,4.05689 0.99518,3.89018 L1.80657,3.08532 C1.97461,2.91864 2.24596,2.91971 2.41264,3.08779 L4.54807,5.24054 L9.5964,0.23282 C9.7644,0.06614 10.0358,0.06721 10.2024,0.23525 L11.0073,1.04661 C11.174,1.21468 11.1729,1.48604 11.0049,1.65271 Z" /></svg>'
+                );
+                background-size: 12px 8px;
+              }
+
+              &::before {
+                border-color: $color-coal;
+              }
+            }
+          }
+        }
+
+        &:disabled {
+          &:checked {
+            ~ #{$root}-control {
+              &-label {
+                &::before {
+                  background: transparent;
+                }
+              }
+            }
+          }
+
+          ~ #{$root}-control {
+            &-label {
+              @include typography-body2();
+
+              line-height: 24px;
+
+              &::before {
+                background: transparent;
+              }
+            }
+          }
+        }
+      }
+
+      &-label {
+        &::before {
+          background: white;
+          border: 2px solid $color-coal;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  $root: &;
+
+  &-tabs {
+    @include elevation-z2();
+
+    border: 0;
+    border-radius: 16px;
+    justify-content: center;
+
+    #{$root}-link {
+      @include typography-button();
+
+      $link-border-color: rgba($color-coal, 0.05);
+
+      background: white;
+      border: 0;
+      border-left: 1px solid $link-border-color;
+      border-right: 1px solid $link-border-color;
+      border-radius: 0;
+      flex-basis: 0;
+      flex-grow: 1;
+      margin: 0;
+      padding: 9px 0;
+      text-align: center;
+
+      &:first-child {
+        border-left: 0px;
+        border-radius: 16px 0 0 16px;
+      }
+
+      &:last-child {
+        border-radius: 0 16px 16px 0;
+        border-right: 0px;
+      }
+
+      &.active {
+        border: 0;
+        background: $gradient-violet-lilac;
+        color: white;
+      }
+    }
+  }
+}

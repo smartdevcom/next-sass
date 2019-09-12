@@ -1,0 +1,44 @@
+@import '../styles/_mixins';
+
+.account-layout {
+  position: relative;
+
+  &__header {
+    $headerRoot: &;
+
+    padding: 20px 0;
+    position: relative;
+
+    &--white {
+      background: transparent;
+
+      #{$headerRoot}-logo {
+        color: white;
+      }
+    }
+
+    &--violet {
+      background: white;
+
+      #{$headerRoot}-logo {
+        color: $color-violet;
+      }
+    }
+
+    &-back {
+      @include typography-button();
+
+      color: rgba($color-darkgray, 0.5);
+    }
+
+    &-logo {
+      height: 21px;
+      width: auto;
+    }
+
+    &-signout {
+      background: $gradient-violet-lilac;
+      border: 0;
+    }
+  }
+}

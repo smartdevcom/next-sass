@@ -1,0 +1,76 @@
+@import '../styles/_mixins';
+
+.event-card-component {
+  overflow: hidden;
+
+  &::before {
+    background: white;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 8px;
+  }
+
+  &--status-green {
+    &::before {
+      background: $color-green;
+    }
+  }
+
+  &--status-orange {
+    &::before {
+      background: $color-orange;
+    }
+  }
+
+  &__quantity {
+    @include elevation-z2();
+    @include typography-headline6();
+
+    background: white;
+    border-radius: 50%;
+    line-height: 30px;
+    position: absolute;
+    right: 16px;
+    text-align: center;
+    top: 10px;
+    width: 30px;
+  }
+
+  &__image {
+    border-radius: 50%;
+    color: $gradient-violet-lilac;
+    display: block;
+    width: 120px;
+
+    &-container {
+      align-items: center;
+      position: relative;
+      flex: 0 0 140px;
+    }
+
+    &-wrapper {
+      display: block;
+      padding: 10px 16px 10px 14px;
+    }
+  }
+
+  &__body {
+    padding: 17px 16px 17px 24px;
+  }
+
+  &__title {
+    @include typography-subtitle1();
+
+    margin: 0 0 12px;
+  }
+
+  &__status,
+  &__dates {
+    @include typography-body2();
+
+    margin: 0 0 8px;
+  }
+}

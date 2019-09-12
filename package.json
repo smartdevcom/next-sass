@@ -1,0 +1,51 @@
+{
+	"name": "next-sass",
+	"version": "0.1.0",
+	"description": "Front-End of next-sass",
+	"author": "simba",
+	"private": true,
+	"keywords": [
+		"front-end",
+		"frontend"
+	],
+	"engines": {
+		"node": ">=7.5.0",
+		"npm": ">=4.1.2"
+	},
+	"scripts": {
+		"dev": "next dev --port 8080",
+		"build": "next build",
+		"lint": "eslint --ext .js,.jsx .",
+		"lint:fix": "eslint . --fix",
+		"start": "next start --port ${PORT:-8080}",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"@svgr/webpack": "^4.3.2",
+		"@zeit/next-sass": "^1.0.1",
+		"axios": "^0.19.0",
+		"bootstrap": "^4.3.1",
+		"classnames": "^2.2.6",
+		"dotenv": "^8.0.0",
+		"jquery": "^3.4.1",
+		"next": "^9.0.3",
+		"node-sass": "^4.12.0",
+		"nookies": "^2.0.8",
+		"prop-types": "^15.7.2",
+		"react": "^16.9.0",
+		"react-bootstrap": "^1.0.0-beta.11",
+		"react-dom": "^16.9.0"
+	},
+	"devDependencies": {
+		"babel-eslint": "^10.0.2",
+		"eslint": "^6.1.0",
+		"eslint-config-standard": "^13.0.1",
+		"eslint-config-standard-react": "^8.0.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-node": "^9.1.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-standard": "^4.0.0",
+		"husky": "^3.0.3"
+	}
+}

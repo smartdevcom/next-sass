@@ -1,0 +1,16 @@
+# Dependencies
+/node_modules
+/package-lock.json
+
+# Miscellaneous
+.DS_Store
+/.env
+
+# Next.js
+/.next/
+
+# Production
+/build
+
+# Testing
+/coverage

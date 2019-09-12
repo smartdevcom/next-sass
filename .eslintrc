@@ -1,0 +1,29 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-react"],
+  "rules": {
+    "arrow-parens": ["error", "always"],
+    "arrow-body-style": ["error", "always"],
+    "capitalized-comments": "error",
+    "curly": ["error", "all"],
+    "no-console": "error",
+    "no-warning-comments": "error",
+    "max-len": [
+      "error",
+      {
+        "code": 80,
+        "tabWidth": 2
+      }
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+
+    "jsx-quotes": ["error", "prefer-double"]
+  }
+}

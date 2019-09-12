@@ -1,0 +1,14 @@
+$color-amaranth: #EF2662;
+$color-coal: #484848;
+$color-darkgray: #969696;
+$color-green: #27AE60;
+$color-lilac: #B162E5;
+$color-orange: #F2994A;
+$color-powder: #FAFAFA;
+$color-violet: #9528DC;
+
+$gradient-violet-lilac: linear-gradient(
+  90deg,
+  $color-violet 0%,
+  $color-lilac 100%
+);

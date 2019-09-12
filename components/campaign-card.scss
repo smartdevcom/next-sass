@@ -1,0 +1,77 @@
+@import '../styles/_mixins';
+
+.campaign-card-component {
+  overflow: hidden;
+
+  &::before {
+    background: white;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 8px;
+  }
+
+  &--status-green {
+    &::before {
+      background: $color-green;
+    }
+  }
+
+  &--status-orange {
+    &::before {
+      background: $color-orange;
+    }
+  }
+
+  &--status-gray {
+    &::before {
+      background: $color-darkgray;
+    }
+  }
+
+  &__image {
+    background-color: $color-powder;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    display: block;
+    height: 120px;
+    width: 120px;
+
+    &-container {
+      align-items: center;
+      position: relative;
+      flex: 0 0 140px;
+    }
+
+    &-wrapper {
+      display: block;
+      padding: 10px 16px 10px 14px;
+    }
+  }
+
+  &__body {
+    padding: 16px 0 10px;
+  }
+
+  &__name {
+    @include typography-subtitle1();
+
+    margin: 0 0 10px;
+  }
+
+  &__status, &__compensation-type, &__dates {
+    @include typography-body2();
+
+    margin: 0 0 6px;
+  }
+
+  &__last-update {
+    @include typography-caption();
+
+    color: rgba($color-coal, 0.5);
+  }
+}
