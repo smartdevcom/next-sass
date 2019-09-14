@@ -15,6 +15,8 @@ import { withAuth } from '../utils/auth'
 
 import './index.scss'
 
+//root index page
+
 class IndexPage extends Component {
   static propTypes = {
     user: propTypes.user.isRequired
